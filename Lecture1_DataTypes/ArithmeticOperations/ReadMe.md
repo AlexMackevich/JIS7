@@ -1,1 +1,1 @@
-Home Work Level 1: ArithmeticOperations
+Home Work Level 1: Arithmetic Operations
