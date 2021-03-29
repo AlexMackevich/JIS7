@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Collections;
 import org.apache.commons.lang3.ArrayUtils;
-
+//**********@Checked***************//
 
 public class ArrayExample {
 
