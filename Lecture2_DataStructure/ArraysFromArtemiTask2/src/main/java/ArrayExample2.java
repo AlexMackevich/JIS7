@@ -19,7 +19,7 @@ public class ArrayExample2 {
         for (int mas = 0; mas < array1.length; mas++) {
             if (ArrayUtils.contains(array1, 0)) {
                 System.out.println("\nМассив не заполнен\n");
-            } else array1 = Arrays.copyOf(array1, array1.length+3);
+            } else array1 = Arrays.copyOf(array1, array1.length * 3 / 2);
         }
         System.out.println(Arrays.toString(array1));
         System.out.println(array1.length);
