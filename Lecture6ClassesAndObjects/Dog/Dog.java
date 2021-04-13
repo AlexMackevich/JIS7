@@ -13,15 +13,16 @@ public class Dog {
     }
 
     @Override
-    public String toString() {
+    public String toString() { //toString в самом конце идет. Там разработчик ожидает его увидеть.
         return "Dog{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", color='" + color + '\'' +
                 '}';
     }
+   //Геттеры и сеттеры quals and hashCode добавь
 
-    public void voice(){
+    public void voice(){ //Методы выынеси в отдельный класс DogService 
 
        System.out.println("Гав!");
    }
