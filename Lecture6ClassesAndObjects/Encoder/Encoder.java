@@ -1,5 +1,5 @@
 package by.jrr.HomeWork.Lecture6ObjectsAndClasses.Encoder;
-
+//***********cheched***********
 import javax.swing.*;
 import java.util.Scanner;
 
