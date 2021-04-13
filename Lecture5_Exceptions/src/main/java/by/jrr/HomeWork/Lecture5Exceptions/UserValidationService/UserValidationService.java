@@ -1,5 +1,5 @@
 package by.jrr.HomeWork.Lecture5Exceptions.UserValidationService;
-
+//***********cheched***********
 public class UserValidationService {
 
     public void userValidationName(User user){
@@ -17,3 +17,6 @@ public class UserValidationService {
         }else throw new UserValidationException("Возраст не соответствует минимальному или максимальному значению возраста");
     }
 }
+
+//Метод называется userValidationName а валидирует и имя и возраст. Для разработчика это неочевидно и может сконфузить. Раздели метод на два. Для валидации имени и возраста отдельно.
+//А еще в методах валидации принято первое слово использовать validateUserName например
