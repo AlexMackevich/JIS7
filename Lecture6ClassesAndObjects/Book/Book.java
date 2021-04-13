@@ -49,7 +49,7 @@ public class Book {
         this.author = author;
         this.name = name;
         this.numberOfSheets = numberOfSheets;
-    }
+    } //Саш конструкторы идут сразу после обьявления переменных, потом геттеры и сеттеры и потом equals, hashCode и toString. Я возможно порядок не обозначал но принято так
 
     @Override
     public String toString() {
