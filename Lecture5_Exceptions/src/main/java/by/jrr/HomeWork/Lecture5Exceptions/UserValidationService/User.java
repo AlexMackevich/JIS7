@@ -1,5 +1,5 @@
 package by.jrr.HomeWork.Lecture5Exceptions.UserValidationService;
-
+//***********cheched***********
 public class User {
 
     private String firstName;
