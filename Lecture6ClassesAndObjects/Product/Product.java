@@ -1,12 +1,12 @@
 package by.jrr.HomeWork.Lecture6ObjectsAndClasses.Product;
-
+//***********cheched***********
 import java.util.Scanner;
 
 public class Product {
 
 Scanner scanner = new Scanner(System.in);
 
-    String name;
+    String name; //Инкупсулируй переменные . Доступ private иначе твои геттеры и сеттеры бессмысленны
     double regularPrice = scanner.nextDouble();
     double discount = scanner.nextDouble();
 
@@ -42,7 +42,7 @@ Scanner scanner = new Scanner(System.in);
     public Product(String name) {
         this.name = name;
     }
-
+//Добавь equals and hashCode
     @Override
     public String toString() {
         return "Product{" +
