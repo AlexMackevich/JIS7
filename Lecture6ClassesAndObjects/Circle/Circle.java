@@ -16,5 +16,5 @@ public class Circle {
         double area = Math.pow(radius, 2) * pi;
        // scanner.close();
         return area;
-    }
+    }//Не оставляй в коде закомментированный код. Если он здесь не нужен удаляй его
 }
