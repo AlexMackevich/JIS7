@@ -7,7 +7,7 @@ public class App {
 
     public static void main(String[] args) {
 
-    CollectionOfRandomNumbers collectionOfRandomNumbers = new CollectionOfRandomNumbers();
+    var collectionOfRandomNumbers = new CollectionOfRandomNumbers();
 
         List<Integer> collection = collectionOfRandomNumbers.setOfRandomNumbers();
         System.out.println(collection);
