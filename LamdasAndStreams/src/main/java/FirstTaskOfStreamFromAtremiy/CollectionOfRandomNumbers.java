@@ -7,7 +7,7 @@ public class CollectionOfRandomNumbers {
 
     public List setOfRandomNumbers () {
 
-        List<Integer> collectionOfRandomNumbers = new ArrayList<>();
+        var collectionOfRandomNumbers = new ArrayList<>();
         for (int a = 0; a < 15; a++){
           collectionOfRandomNumbers.add((int) (Math.random()*100));
         }
