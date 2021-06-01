@@ -5,7 +5,6 @@ import java.util.List;
 
 public class CollectionOfRandomNumbers {
 
-
     public List setOfRandomNumbers () {
 
         List<Integer> collectionOfRandomNumbers = new ArrayList<>();
