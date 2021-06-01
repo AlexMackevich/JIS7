@@ -9,10 +9,10 @@ public class App {
 
     var collectionOfRandomNumbers = new CollectionOfRandomNumbers();
 
-        List<Integer> collection = collectionOfRandomNumbers.setOfRandomNumbers();
+        var collection = collectionOfRandomNumbers.setOfRandomNumbers();
         System.out.println(collection);
 
-        List<Integer> collectionOfEvenNumbers = collection.stream()
+        var collectionOfEvenNumbers = collection.stream()
                 .filter(it -> it % 2 == 0)
                 .collect(Collectors.toList());
 
