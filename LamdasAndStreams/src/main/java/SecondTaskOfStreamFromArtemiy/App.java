@@ -10,7 +10,7 @@ public class App {
     public static void main(String[] args) {
         CollectionOfString collectionOfString = new CollectionOfString();
 
-        List<String> stringArrayList = new ArrayList<>();
+        var stringArrayList = new ArrayList<>();
         stringArrayList.add("First string");
         stringArrayList.add("Java are awesome");
         stringArrayList.add("Who add streams in Java - them are fcking genius");
@@ -18,10 +18,10 @@ public class App {
         stringArrayList.add("");
         stringArrayList.add("Something about lambdas");
 
-        String i = collectionOfString.method("string");
+        var needWord = collectionOfString.method("string");
 
        stringArrayList.stream()
-                .filter(it -> it.startsWith(i) || it.endsWith(i))
+                .filter(it -> it.startsWith(needWord) || it.endsWith(needWord))
                 .forEach(System.out::println);
 
 
