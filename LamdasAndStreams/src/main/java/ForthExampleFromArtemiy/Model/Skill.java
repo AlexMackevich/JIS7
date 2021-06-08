@@ -12,5 +12,4 @@ public class Skill {
 
     private String nameOfSkill;
     private int skillPercentage;
-
 }
