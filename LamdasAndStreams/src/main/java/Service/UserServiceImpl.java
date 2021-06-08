@@ -32,11 +32,24 @@ public class UserServiceImpl implements UserService {
                 .sorted(Comparator.comparing(User::getNickName))
                 .forEach(System.out::println);
     }
+    
+    @Override
+    public long counterOfUserGuestStatusAndActive(List<User> userList) {
+        var filterUserList = findUsersWithStatusGuest(userList);
+       return filterUserList.stream()
+                .filter(it -> it.isActive())
+                .count();
+    }
 
     private void findUsersLessEighteen(User user) {
         if (user.getAge() < 18) {
             user.setStatusOfUser(GUEST);
             user.setActive(false);
-        }
+    }
+        
+        private List<User> findUsersWithStatusGuest(List<User> userList) {
+        return userList.stream()
+                .filter(it -> it.getStatusOfUser().equals(User.StatusOfUser.GUEST))
+                .collect(Collectors.toList());
     }
 }
