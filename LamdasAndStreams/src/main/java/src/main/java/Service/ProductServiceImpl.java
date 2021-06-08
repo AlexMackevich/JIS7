@@ -1,45 +1,45 @@
 package Service;
 
 import Model.Product;
+
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class ProductServiceImpl implements ProductService {
 
-    double averagePriceOfProducts;
-    double averageDiscountOnProducts;
+    @Override
+    public List<Product> findProductsWithSpecialPriceAndDiscount(List<Product> listOfProduct){
+        return listOfProduct.stream()
+                .filter(it -> it.getPriceOfProduct() < 10.5 & it.getDiscountOnProduct() > 30)
+                .collect(Collectors.toList());
+    }
 
     @Override
-    public double findAveragePriceOfProduct(List<Product> productList) {
-        return averagePriceOfProducts = productList.stream()
-                .mapToDouble(it -> it.getPriceOfProduct())
-                .average()
-                .orElseThrow();
+    public Product findProductHighPriceMinDiscount(List<Product> productList) {
+        return productList.stream()
+                .filter(it -> it.getDiscountOnProduct() == findMinDiscount(productList))
+                .max(Comparator.comparing(Product::getPriceOfProduct))
+                .orElseThrow(IllegalAccessError::new);
     }
+
     @Override
-    public double findAverageDiscountOnProduct(List<Product> productList) {
-        return averageDiscountOnProducts = productList.stream()
+    public Product findProductLowPriceHighDiscount(List<Product> productList) {
+        return productList.stream()
+                .filter(it -> it.getDiscountOnProduct() == findMaxDiscount(productList))
+                .min(Comparator.comparing(Product::getPriceOfProduct))
+                .orElseThrow(IllegalAccessError::new);
+    }
+
+    private double findMinDiscount (List<Product> productList){
+        return productList.stream()
                 .mapToDouble(it -> it.getDiscountOnProduct())
-                .average()
-                .orElseThrow();
+                .reduce(0, Double::min);
     }
 
-    public void findProductWithHighPriceAndLowDiscount(List<Product> productList) {
-        var listOfProductWithHighPrice = productList.stream()
-                .filter(it -> it.getPriceOfProduct() > averagePriceOfProducts)
-                .collect(Collectors.toList());
-
-        listOfProductWithHighPrice.stream()
-                .filter(it -> it.getDiscountOnProduct() < averageDiscountOnProducts)
-                .forEach(System.out::println);
-    }
-    public void findProductWithLowPriceAndHighDiscount(List<Product> productList) {
-        var listOfProductWithLowPrice = productList.stream()
-                .filter(it -> it.getPriceOfProduct() < averagePriceOfProducts)
-                .collect(Collectors.toList());
-
-        listOfProductWithLowPrice.stream()
-                .filter(it -> it.getDiscountOnProduct() > averageDiscountOnProducts)
-                .forEach(System.out::println);
+    private double findMaxDiscount (List<Product> productList){
+        return productList.stream()
+                .mapToDouble(it -> it.getDiscountOnProduct())
+                .reduce(0, Double::max);
     }
 }
