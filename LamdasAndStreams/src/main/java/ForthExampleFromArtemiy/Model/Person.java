@@ -21,5 +21,4 @@ public class Person {
         this.levelOfStatus = levelOfStatus;
         this.skills = Arrays.asList(skill);
     }
-
 }
