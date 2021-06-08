@@ -49,5 +49,9 @@ public class App {
         System.out.println("_______________");
 
         userService.sortedUserList(userList);
+        System.out.println("_______________");
+
+        System.out.println(userService.counterOfUserGuestStatusAndActive(userList));
+        System.out.println("_______________");
     }
 }
