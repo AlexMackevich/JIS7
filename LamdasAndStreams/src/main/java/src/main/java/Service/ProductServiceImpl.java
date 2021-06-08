@@ -30,6 +30,13 @@ public class ProductServiceImpl implements ProductService {
                 .min(Comparator.comparing(Product::getPriceOfProduct))
                 .orElseThrow(IllegalAccessError::new);
     }
+    
+    @Override
+    public void sortedProductListByDiscountAfterPrice(List<Product> productList) {
+        productList.stream()
+                .sorted(Comparator.comparing(Product::getDiscountOnProduct).thenComparing(Product::getPriceOfProduct))
+                .forEach(System.out::println);
+    }
 
     private double findMinDiscount (List<Product> productList){
         return productList.stream()
