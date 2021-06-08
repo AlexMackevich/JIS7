@@ -2,7 +2,7 @@ package by.jrr.HomeWork.Lecture5Exceptions.UserValidationService;
 //***********cheched***********
 public class UserValidationService {
 
-    public void userValidationName(User user){
+    public void validateUserName(User user){
 
         int firstNameLength = Integer.parseInt(user.getFirstName());
         int lastNameLength = Integer.parseInt(user.getLastName());
