@@ -15,13 +15,13 @@ public class App {
         Product eggs = new Product("eggs", 2.9, 0);
         Product fish = new Product("fish", 6.7, 5);
         Product chicken = new Product("chicken", 7.5, 5);
-        Product pork = new Product("pork", 11.25, 25);
+        Product pork = new Product("pork", 11.25, 35);
         Product beef = new Product("beef", 13.5, 15);
-        Product vegetables = new Product("vegetables", 5.55, 10);
+        Product vegetables = new Product("vegetables", 5.55, 40);
         Product fruits = new Product("fruits", 8.5, 20);
-        Product vine = new Product("vine", 18.67, 30);
+        Product vine = new Product("vine", 18.67, 70);
         Product champagne = new Product("champagne", 25, 35);
-        Product beer = new Product("beer", 17, 17);
+        Product beer = new Product("beer", 17, 25);
         Product cognac = new Product("cognac", 40, 15);
 
         productList.add(bread);
