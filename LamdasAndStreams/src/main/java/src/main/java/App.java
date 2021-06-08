@@ -24,20 +24,20 @@ public class App {
         Product beer = new Product("beer", 17, 17);
         Product cognac = new Product("cognac", 40, 15);
 
-        productList. add(bread);
-        productList. add(milk);
-        productList. add(cheese);
-        productList. add(eggs);
-        productList. add(fish);
-        productList. add(chicken);
-        productList. add(pork);
-        productList. add(beef);
-        productList. add(vegetables);
-        productList. add(fruits);
-        productList. add(vine);
-        productList. add(champagne);
-        productList. add(beer);
-        productList. add(cognac);
+        productList.add(bread);
+        productList.add(milk);
+        productList.add(cheese);
+        productList.add(eggs);
+        productList.add(fish);
+        productList.add(chicken);
+        productList.add(pork);
+        productList.add(beef);
+        productList.add(vegetables);
+        productList.add(fruits);
+        productList.add(vine);
+        productList.add(champagne);
+        productList.add(beer);
+        productList.add(cognac);
 
         var productService = new ProductServiceImpl();
         productService.findAveragePriceOfProduct(productList);
