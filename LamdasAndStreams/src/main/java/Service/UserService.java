@@ -11,4 +11,6 @@ public interface UserService {
 
     void sortedUserList(List<User> userList);
 
+    long counterOfUserGuestStatusAndActive(List<User> userList);
+
 }
