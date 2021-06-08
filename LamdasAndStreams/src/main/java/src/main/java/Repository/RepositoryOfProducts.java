@@ -5,7 +5,7 @@ import Model.Product;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RepositoryOfProducts {
+private class RepositoryOfProducts {
     List<Product> listOfProducts = new ArrayList<>();
 
     Product bread = new Product("bread", 1.25, 35);
@@ -39,5 +39,4 @@ public class RepositoryOfProducts {
         listOfProducts.add(beer);
         listOfProducts.add(cognac);
     }
-
 }
