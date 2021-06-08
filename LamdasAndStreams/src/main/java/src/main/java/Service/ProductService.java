@@ -9,5 +9,7 @@ public interface ProductService {
     Product findProductHighPriceMinDiscount(List<Product> productList);
 
     Product findProductLowPriceHighDiscount(List<Product> productList);
+    
+    void sortedProductListByDiscountAfterPrice(List<Product> productList);
 }
 
