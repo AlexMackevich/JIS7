@@ -40,13 +40,14 @@ public class App {
         productList.add(cognac);
 
         var productService = new ProductServiceImpl();
-        productService.findAveragePriceOfProduct(productList);
-        productService.findAverageDiscountOnProduct(productList);
-        System.out.println("__________");
-        productService.findProductWithHighPriceAndLowDiscount(productList);
-        System.out.println("__________");
-        productService.findProductWithLowPriceAndHighDiscount(productList);
-        System.out.println("__________");
+        System.out.println(productService.findProductsWithSpecialPriceAndDiscount(productList));
+        System.out.println("____________________");
+
+        System.out.println(productService.findProductHighPriceMinDiscount(productList));
+        System.out.println("____________________");
+
+        System.out.println(productService.findProductLowPriceHighDiscount(productList));
+        System.out.println("____________________");
 
         productList.stream()
                 .sorted(Comparator.comparing(it -> it.getPriceOfProduct()))
