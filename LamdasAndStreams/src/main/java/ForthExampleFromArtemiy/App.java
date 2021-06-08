@@ -13,7 +13,6 @@ public class App {
 
         List<Person> persons = new ArrayList<>();
 
-
         Person person1 = new Person("Lokesh", 1L,
                 new Skill("English", 10),
                 new Skill("Kannada", 20),
@@ -58,6 +57,5 @@ public class App {
         if (personsWithSpecificSkillAndPercentage.isEmpty()){
             System.out.println(personService.findPersonsWithSpecificSkillAndPercentage(persons, "Kannada", 30));
         } else System.out.println("Persons, which you try to find - didn't exist");
-
     }
 }
