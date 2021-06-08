@@ -49,9 +49,6 @@ public class App {
         System.out.println(productService.findProductLowPriceHighDiscount(productList));
         System.out.println("____________________");
 
-        productList.stream()
-                .sorted(Comparator.comparing(it -> it.getPriceOfProduct()))
-                .sorted(Comparator.comparing(Product::getDiscountOnProduct))
-                .forEach(System.out::println);
+        productService.sortedProductListByDiscountAfterPrice(productList);
     }
 }
