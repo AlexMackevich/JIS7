@@ -7,7 +7,6 @@ import ThirdTaskOfStreamFromArtemiy.model.Product;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import static ThirdTaskOfStreamFromArtemiy.Service.CalculationProductImpl.*;
 
 public class App {
@@ -51,15 +50,12 @@ public class App {
         CalculationProductService calculationProductService = new CalculationProductImpl();
 
         findProductWithPriceLessTenPointFiveAndDiscountMoreThanThirty(listOfProducts);
-
         System.out.println("");
 
         findProductWithLowPriceAndHighDiscount(listOfProducts, calculationProductService);
-
         System.out.println("");
 
         findProductWithHighPriceAndLowDiscount(listOfProducts, calculationProductService);
-
         System.out.println("");
 
         listOfProducts.parallelStream()
