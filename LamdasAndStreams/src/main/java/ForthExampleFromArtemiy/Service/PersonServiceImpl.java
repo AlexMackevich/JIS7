@@ -10,7 +10,6 @@ import java.util.stream.Collectors;
 
 public class PersonServiceImpl implements PersonService {
 
-
     public List<Person> findPersonsWithSpecificSkillAndPercentage(Collection<Person> userList, String nameOfSkill, int percentageOfSkill) {
 
        return userList.stream()
@@ -18,5 +17,4 @@ public class PersonServiceImpl implements PersonService {
                         .anyMatch(skill -> skill.getNameOfSkill().equals(nameOfSkill) & skill.getSkillPercentage() > percentageOfSkill))
                 .collect(Collectors.toList());
     }
-
 }
