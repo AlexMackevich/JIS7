@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface PersonService {
 
-    Person findPersonsWithNecessarySkillAndPercentage(String name);
+    Person findPersonWithNecessarySkill (String nameOfNecessarySkill);
 }
