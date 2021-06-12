@@ -9,7 +9,6 @@ public class Encoder {
     short code;
     char symbol;
 
-
     public void encode(short code){
         code = scanner.nextShort();
         symbol = (char) code;
