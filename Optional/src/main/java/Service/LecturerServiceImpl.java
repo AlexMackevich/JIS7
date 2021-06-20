@@ -17,11 +17,11 @@ public class LecturerServiceImpl implements LecturerService {
     }
 
     @Override
-    public void setStudentWithCheckOnNullFields(Lecturer lecturer, Student student) {
+    public void addStudentToLecturer(Lecturer lecturer, Student student) {
         Optional.of(student).stream()
-                .filter(it -> it.getFirstName() != null && it.getLastName() != null && it.getAge() != null)
+                .filter(it -> checkOnNullParameter(student))
                 .findFirst()
-                .orElseThrow(() -> new IfNullField("Some field has Null"));
+                .orElseThrow(() -> new NullFieldException("Some field has Null"));
         lecturer.getStudentList().add(student);
     }
 
@@ -30,6 +30,9 @@ public class LecturerServiceImpl implements LecturerService {
         return lecturerList.stream()
                 .filter(it -> it.getFirstName().equals(firstName) & it.getLastName().equals(lastName))
                 .findFirst()
-                .orElseThrow(() -> new FindNameException("This Lecturer doesn't exist"));
+                .orElseThrow(() -> new LecturerNotFoundException("This Lecturer doesn't exist"));
+    }
+    private boolean checkOnNullParameter (Student student){
+        return nonNull(student.getFirstName()) && nonNull(student.getLastName()) && nonNull(student.getAge());
     }
 }
