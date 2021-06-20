@@ -7,5 +7,5 @@ public interface LecturerService {
 
     Lecturer findByFullName(String firstName, String lastName);
 
-    void setStudentWithCheckOnNullFields(Lecturer lecturer, Student student);
+    void addStudentToLecturer(Lecturer lecturer, Student student);
 }
