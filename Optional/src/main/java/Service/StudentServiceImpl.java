@@ -19,17 +19,21 @@ public class StudentServiceImpl implements StudentService {
         return studentList.stream()
                 .filter(it -> it.getFirstName().equals(firstName) & it.getLastName().equals(lastName))
                 .findFirst()
-                .orElseThrow(() -> new FindNameException("This student doesn't exist"));
+                .orElseThrow(() -> new LecturerNotFoundException("This student doesn't exist"));
     }
 
     @Override
-    public void setNewArgsInField(Student student, String firstName, String lastName, Integer age) {
+    public void updateStudent(Student student, String firstName, String lastName, Integer age) {
         Optional.of(student).ifPresent(it -> {
-            if (firstName != null && lastName != null && age != null){
+            if (hasNotNullParameters(firstName, lastName, age)){
                 it.setFirstName(firstName);
                 it.setLastName(lastName);
                 it.setAge(age);
-            } else new IfNullField("Some field has Null");
+            } else new NullFieldException("Some field has Null");
         });
+    }
+
+    private boolean hasNotNullParameters(String firstName, String lastName, Integer age){
+        return nonNull(firstName) && nonNull(lastName) && nonNull(age);
     }
 }
