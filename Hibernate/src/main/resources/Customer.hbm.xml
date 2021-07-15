@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="entity.Customer" table="customers">
+        <id name="customerId" type="string" column="customer_id"/>
+        <property name="companyName" column="company_name" type="string"/>
+        <property name="contactName" column="contact_name" type="string"/>
+        <property name="address" column="address" type="string"/>
+        <property name="city" column="city" type="string"/>
+        <property name="region" column="region" type="string"/>
+        <property name="postalCode" column="postal_code" type="string"/>
+        <property name="country" column="country" type="string"/>
+        <property name="phone" column="phone" type="string"/>
+        <property name="fax" column="fax" type="string"/>
+    </class>
+</hibernate-mapping>
