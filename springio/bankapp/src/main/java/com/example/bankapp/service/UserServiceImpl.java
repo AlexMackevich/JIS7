@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserServiceImpl {
+public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
 
@@ -16,6 +16,7 @@ public class UserServiceImpl {
         this.userRepository = userRepository;
     }
 
+    @Override
     public UserEntity registerUser(String login, String password, String mail) {
         if (login == null || password == null) {
             throw new UserValidationException("Name or password can't be a null");
