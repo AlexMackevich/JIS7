@@ -34,14 +34,14 @@ public class UserController {
     @PostMapping("/register")
     public String  register(@ModelAttribute UserEntity userEntity){
         System.out.println("register request: " + userEntity);
-        UserEntity registerUser = userService.registerUser(userEntity.getUserName(), userEntity.getPassword(), userEntity.getMail());
+        UserEntity registerUser = userService.registerUser(userEntity.getLogin(), userEntity.getPassword(), userEntity.getMail());
         return registerUser == null ? "error_page" : "redirect/login";
     }
 
     @PostMapping("/login")
     public String  login (@ModelAttribute UserEntity userEntity){
         System.out.println("login request: " + userEntity);
-        UserEntity authenticationUser = userService.authenticationUser(userEntity.getUserName(), userEntity.getPassword());
+        UserEntity authenticationUser = userService.authenticationUser(userEntity.getLogin(), userEntity.getPassword());
         if (authenticationUser != null){
             return "user_page";
         } else {
