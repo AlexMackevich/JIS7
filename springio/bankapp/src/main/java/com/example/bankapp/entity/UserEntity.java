@@ -21,8 +21,7 @@ public class UserEntity {
     @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "username")
-    private String userName;
+    private String login;
     private String password;
 
     @Column(name = "phone_number")
@@ -33,10 +32,10 @@ public class UserEntity {
     @JoinColumn(name = "card_id")
     private Collection<CreditCardEntity> creditCard;
 
-    public UserEntity(String firstName, String lastName, String userName, String password, String phoneNumber, String mail, Collection<CreditCardEntity> creditCard) {
+    public UserEntity(String firstName, String lastName, String login, String password, String phoneNumber, String mail, Collection<CreditCardEntity> creditCard) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.userName = userName;
+        this.login = login;
         this.password = password;
         this.phoneNumber = phoneNumber;
         this.mail = mail;
