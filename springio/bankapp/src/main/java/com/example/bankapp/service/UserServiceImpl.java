@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
             throw new UserValidationException("Name or password can't be a null");
         } else {
             UserEntity userEntity = new UserEntity();
-            userEntity.setUserName(login);
+            userEntity.setLogin(login);
             userEntity.setPassword(password);
             userEntity.setMail(mail);
             return userRepository.save(userEntity);
