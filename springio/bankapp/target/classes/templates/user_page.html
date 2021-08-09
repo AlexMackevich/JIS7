@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="form">
+    <form>
+        <h2>Welcome to the personal page <span th:object="${userLogin}"></span> </h2>
+        <a href="/addCreditCard">  Create a new credit card</a>
+        <a href="/addInformation"> Changing customer information </a>
+    </form>
+</div>
+</body>
+</html>
